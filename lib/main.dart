@@ -9,17 +9,35 @@ class FlareButtonApp extends StatefulWidget {
 }
 
 class _FlareButtonAppState extends State<FlareButtonApp> {
-  String _animation = 'Loading';
+  String _animationName = 'Idle';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: FlareActor(
-          "assets/button.flr",
-          animation: _animation,
+        body: Padding(
+          padding: const EdgeInsets.all(48.0),
+          child: GestureDetector(
+            onTap: _onButtonTap,
+            child: FlareActor(
+              "assets/Button.flr",
+              animation: _animationName,
+              fit: BoxFit.contain,
+              shouldClip: false,
+            ),
+          ),
         ),
       ),
     );
+  }
+
+  void _onButtonTap() {
+    setState(() {
+      if (_animationName == 'Idle' || _animationName == 'Restart') {
+        _animationName = 'Loading';
+      } else {
+        _animationName = 'Restart';
+      }
+    });
   }
 }
