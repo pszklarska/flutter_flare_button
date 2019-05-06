@@ -22,10 +22,9 @@ class _FlareButtonAppState extends State<FlareButtonApp> {
             child: GestureDetector(
               onTap: _onButtonTap,
               child: FlareActor(
-                "assets/Button.flr",
+                'assets/Button.flr',
                 animation: _animationName,
                 fit: BoxFit.fitWidth,
-                shouldClip: false,
               ),
             ),
           ),

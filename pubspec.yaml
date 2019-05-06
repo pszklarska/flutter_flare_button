@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  flare_flutter: ^1.3.13
+  flare_flutter: ^1.5.0
 
 dev_dependencies:
   flutter_test:
