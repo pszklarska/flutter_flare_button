@@ -15,15 +15,18 @@ class _FlareButtonAppState extends State<FlareButtonApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(48.0),
-          child: GestureDetector(
-            onTap: _onButtonTap,
-            child: FlareActor(
-              "assets/Button.flr",
-              animation: _animationName,
-              fit: BoxFit.contain,
-              shouldClip: false,
+        body: Center(
+          child: SizedBox(
+            width: 500,
+            height: 75,
+            child: GestureDetector(
+              onTap: _onButtonTap,
+              child: FlareActor(
+                "assets/Button.flr",
+                animation: _animationName,
+                fit: BoxFit.fitWidth,
+                shouldClip: false,
+              ),
             ),
           ),
         ),
